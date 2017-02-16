@@ -124,7 +124,6 @@ function git_branch() {
 
 export PS1="\[$(tput bold)\]\[\033[38;5;121m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\[$(tput sgr0)\]\[\033[38;5;74m\]\h\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput bold)\]\[$(tput sgr0)\]\[\033[38;5;105m\]\w\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput bold)\]\[\033[38;5;208m\]\$(git_branch)$\[$(tput sgr0)\] " 
 alias vpn_connect="sudo openvpn $HOME/.openvpn/Russia_freeopenvpn_tcp.ovpn"
-alias asd="echo $1"
 
 # Goes inside docker container
 # Example of usage: docker_exec prjname_mariadb
@@ -138,4 +137,7 @@ function docker_exec() {
 function docker_stop() {
  docker stop $(docker ps -q -a -f name="$1") && docker rm $(docker ps -q -a -f name="$1")
 }
+
+# Full system update
+alias system_update="sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y && sudo apt-get autoremove -y"
 
