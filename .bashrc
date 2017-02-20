@@ -138,6 +138,15 @@ function docker_stop() {
  docker stop $(docker ps -q -a -f name="$1") && docker rm $(docker ps -q -a -f name="$1")
 }
 
+# Start project based on docker containers.
+export PRJ_PATH="$HOME/prj"
+function prj_start() {
+ CURRENT_PWD=$(pwd)
+ if [ -d "$PRJ_PATH/$1/provision" ]; then
+  cd $PRJ_PATH/$1/provision && docker-compose up -d
+ fi
+ cd $CURRENT_PWD
+}
+
 # Full system update
 alias system_update="sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y && sudo apt-get autoremove -y"
-
