@@ -10,6 +10,7 @@ local beautiful = require("beautiful")
 -- Notification library
 local naughty = require("naughty")
 local menubar = require("menubar")
+-- Scratchpad plugin for awesome wm - https://github.com/notnew/awesome-scratch.
 local scratchpad = require("awesome-scratch.scratch")
 
 -- {{{ Error handling
