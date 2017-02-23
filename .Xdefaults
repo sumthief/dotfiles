@@ -1,0 +1,12 @@
+URxvt.font: xft:Droid Sans Mono:pixelsize=14
+URxvt.boldFont: xft:Droid Sans Mono:pixelsize=14:bold
+URxvt.saveLines: 2000
+URxvt.scrollBar: False
+URxvt.foreground: #ffffff
+URxvt.background: rgba:0000/0000/0000/c800
+URxvt.depth: 32
+URxvt.color4: #ffffff
+URxvt.color9: #cc0000
+URxvt.color10: #00cc66
+URxvt.color12: #0066ff
+URxvt.color13: #cc00cc
