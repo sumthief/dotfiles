@@ -32,7 +32,8 @@ function git_branch() {
  git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1) /' 
 }
 
-export PS1="\[$(tput bold)\]\[\033[38;5;121m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\[$(tput sgr0)\]\[\033[38;5;74m\]\h\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput bold)\]\[$(tput sgr0)\]\[\033[38;5;105m\]\w\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput bold)\]\[\033[38;5;208m\]\$(git_branch)$\[$(tput sgr0)\] " 
+export PS1="\[$(tput bold)\]\[\033[38;5;121m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\[$(tput sgr0)\]\[\033[38;5;74m\]\h\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput bold)\]\[$(tput sgr0)\]\[\033[38;5;105m\]\w\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput bold)\]\[\033[38;5;208m\]\$(git_branch)$\[$(tput sgr0)\] "
+export PATH="$PATH:$HOME/.bin"
 
 # Goes inside docker container
 # Example of usage: docker_exec prjname_mariadb
